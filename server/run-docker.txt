@@ -1,0 +1,6 @@
+create a file named Dockerfile
+then create a .dockerignore file
+then build and run the Docker container with the following commands:
+
+$ docker build -t express-server .
+$ docker run -p 5000:5000 express-server
