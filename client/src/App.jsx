@@ -1,24 +1,25 @@
-import { useEffect, useState } from 'react'
+import { useState, useEffect } from "react";
+
+import "./App.css";
 
 function App() {
+  const [message, setMessage] = useState("");
 
-  const [message, setMessage] = useState(null)
-  
   useEffect(() => {
-    fetch('/api/message')
+    fetch("http://localhost:5000/api/message")
       .then((res) => res.json())
-      .then((data) => {
-        setMessage(data.message)
-      })
-      .catch((err) => console.error("Error fetching data:", err));
-  }, [])
+      .then((data) => setMessage(data.message))
+      .catch((err) => {
+        console.error("Error fetching message", err);
+      });
+  }, []);
 
   return (
     <>
-      <h1>Welcome to Frontend</h1>
-      {message ? <p>{message}</p> : <p>Loading...</p>}
+      <h1>Welcome to chaicode frontend</h1>
+      <h2>data {message}</h2>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
