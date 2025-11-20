@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
 
-import "./App.css";
-
 function App() {
   const [message, setMessage] = useState("");
 
@@ -16,7 +14,7 @@ function App() {
 
   return (
     <>
-      <h1>Welcome to chaicode frontend</h1>
+      <h1>Welcome to Arunava frontend</h1>
       <h2>data {message}</h2>
     </>
   );

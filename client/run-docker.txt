@@ -3,4 +3,4 @@ then create a .dockerignore file
 then build and run the Docker container with the following commands:
 
 $ docker build -t client-server .
-$ docker run -p 3000:3000 client-server
+$ docker run -p 5174:3000 client-server
